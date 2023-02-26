@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Solid.Abstractions
 {
-    public abstract class Bird
+    public abstract class NonFlyingBird:Bird
     {
         private int weight;
         private string colour;
@@ -13,7 +13,7 @@ namespace Solid.Abstractions
         private string beakType;
         private BirdType type;
 
-        protected Bird(int weight, string colour, string size, string beakType, BirdType type)
+        protected NonFlyingBird(int weight, string colour, string size, string beakType, BirdType type):base(weight, colour, size, beakType, type)
         {
             this.weight = weight;
             this.colour = colour;
@@ -22,6 +22,5 @@ namespace Solid.Abstractions
             this.type = type;
         }
 
-        public abstract void makeSound();
     }
 }

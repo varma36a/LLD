@@ -10,10 +10,10 @@ namespace Solid
         static void Main(string[] args)
         {
             Bird parrot = new Parrot(10, "Green", "Small", "Sharp", BirdType.Parrot);
-            parrot.fly();
+            //parrot.fly();
 
             Bird eagle = new Eagle(20, "Brown", "Medium", "Sharp", BirdType.Eagle);
-            eagle.fly();
+            //eagle.fly();
         }
     }
 }
