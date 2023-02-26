@@ -1,17 +1,18 @@
 ﻿using Solid.Abstractions;
 using Solid.Common;
+using Solid.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Solid.Implementations
 {
-    public class Parrot : FlyingBird
+    public class Parrot : Bird, Flyable
     {
         public Parrot(int weight, String colour, String size, String beakType, BirdType type):base(weight, colour, size, beakType, type)
         {
         }
-        public override void fly()
+        public  void fly()
         {
             Console.WriteLine("\n Parrot is flying");
         }
