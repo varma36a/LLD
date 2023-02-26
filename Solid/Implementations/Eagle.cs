@@ -9,12 +9,15 @@ namespace Solid.Implementations
 {
     public class Eagle : Bird, Flyable
     {
-        public Eagle(int weight, String colour, String size, String beakType, BirdType type) : base(weight, colour, size, beakType, type)
+        private FlyingBehaviour flyingBehaviour;
+
+        public Eagle(int weight, String colour, String size, String beakType, BirdType type, FlyingBehaviour flyingBehaviour) : base(weight, colour, size, beakType, type)
         {
+            this.flyingBehaviour = flyingBehaviour;
         }
         public void fly()
         {
-            Console.WriteLine("\n Eagle is flying");
+            flyingBehaviour.makeFly();
         }
 
         public override void makeSound()
